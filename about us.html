@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Seniors '26</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:linear-gradient(135deg,#f39aa5,#c7a0d9);min-height:100vh;padding:24px;color:#222}
+.page{max-width:1300px;margin:auto;background:white;border-radius:28px;padding:28px;box-shadow:0 12px 35px rgba(0,0,0,.15)}
+header{text-align:center;padding-bottom:18px}
+header h1{font-size:clamp(40px,6vw,64px);color:#7927c8;font-weight:800}
+header p{font-size:20px;color:#444;margin-top:4px}
+.subtitle{color:#d45d91!important;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.student-card{background:white;border-radius:16px;padding:9px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.14);cursor:pointer;transition:.25s;border:1px solid #eee}
+.student-card:hover{transform:translateY(-5px);box-shadow:0 9px 20px rgba(0,0,0,.18)}
+.photo{height:145px;border-radius:11px;overflow:hidden;position:relative;background:linear-gradient(135deg,#eebdf9,#bda7f7)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold}
+.name{margin-top:8px;font-weight:bold;font-size:16px}
+small{color:#d45d91;font-size:11px}
+.modal{display:none;position:fixed;z-index:1000;inset:0;background:rgba(34,34,34,.68);align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{width:min(520px,95vw);max-height:90vh;overflow:auto;background:white;border-radius:24px;padding:25px;text-align:center;position:relative;box-shadow:0 15px 45px rgba(0,0,0,.3)}
+.close{position:absolute;right:14px;top:10px;width:38px;height:38px;border:0;border-radius:50%;background:#e99ac5;color:white;font-size:28px;cursor:pointer}
+.modal-box img{width:190px;height:190px;object-fit:cover;border-radius:18px;margin-bottom:15px}
+.modal-box h2{font-size:30px;color:#7927c8}
+.line{width:55px;height:4px;background:#e99ac5;margin:10px auto 18px}
+.modal-box p{font-size:17px;line-height:1.7;color:#444;text-align:left}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:700px){body{padding:12px}.page{padding:18px}.grid{grid-template-columns:repeat(2,1fr)}.photo{height:155px}}
+.instagram-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:15px;
+    width:50px;
+    height:50px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);
+    color:white;
+    text-decoration:none;
+    font-size:25px;
+    transition:.3s;
+}
+
+.instagram-icon:hover{
+    transform:scale(1.1);
+}
+
+nav{
+    background:#222;
+    padding:18px;
+    border-bottom:8px solid #e99ac5;
+    border-radius:18px;
+    margin-bottom:25px;
+}
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+    gap:45px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+nav a:hover{color:#e99ac5}
+@media(max-width:700px){
+    nav ul{flex-wrap:wrap;gap:18px}
+    nav a{font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav>
+<ul>
+<li><a href="start.html">Home</a></li>
+<li><a href="activities.html">Activities</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a href="about us.html">About Us</a></li>
+</ul>
+</nav>
+
+<header>
+<h1>ABOUT US</h1>
+<p>Our memories • Our journey • Our story</p>
+<p class="subtitle">Seniors '26 • 19 students • One unforgettable year</p>
+
+<a href="https://www.instagram.com/seniors26cmm/" target="_blank" class="instagram-icon">
+    📷
+</a>
+</header>
+<div class="grid">
+<!-- =========================
+     STUDENTS 1 - 11
+========================= -->
+
+<!-- 1. Alisson Erazo -->
+<div class="student-card" onclick="openModal(1)">
+    <div class="photo">
+        <img src="ae.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Alisson Erazo</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 2. Ayelen Avila -->
+<div class="student-card" onclick="openModal(2)">
+    <div class="photo">
+        <img src="aa.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Ayelen Avila</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 3. Angie Lanza -->
+<div class="student-card" onclick="openModal(3)">
+    <div class="photo">
+        <img src="al.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Angie Lanza</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 4. Andrea Serrano -->
+<div class="student-card" onclick="openModal(4)">
+    <div class="photo">
+        <img src="as.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Andrea Serrano</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 5. Ana Lucia -->
+<div class="student-card" onclick="openModal(5)">
+    <div class="photo">
+        <img src="aaaa.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Ana Lucia</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 6. Camila Briceño -->
+<div class="student-card" onclick="openModal(6)">
+    <div class="photo">
+        <img src="cb.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Camila Briceño</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 7. Eimy Baiza -->
+<div class="student-card" onclick="openModal(7)">
+    <div class="photo">
+        <img src="eb.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Eimy Baiza</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 8. Solangi Zuniga -->
+<div class="student-card" onclick="openModal(8)">
+    <div class="photo">
+        <img src="sh.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Solangi Zuniga</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 9. Soemy Salinas -->
+<div class="student-card" onclick="openModal(9)">
+    <div class="photo">
+        <img src="ss.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Soemy Salinas</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 10. Maria Fernanda -->
+<div class="student-card" onclick="openModal(10)">
+    <div class="photo">
+        <img src="mf.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Maria Fernanda</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 11. Valeria Cañas -->
+<div class="student-card" onclick="openModal(11)">
+    <div class="photo">
+        <img src="vc.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Valeria Cañas</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 12. Rafael Flores -->
+<div class="student-card" onclick="openModal(12)">
+    <div class="photo">
+        <img src="rl.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Rafael Flores</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 13. Mauricio Espinoza -->
+<div class="student-card" onclick="openModal(13)">
+    <div class="photo">
+        <img src="gg.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Mauricio Espinoza</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 14. Nelson Soto -->
+<div class="student-card" onclick="openModal(14)">
+    <div class="photo">
+        <img src="ns.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Nelson Soto</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 15. Jafeth Lozano -->
+<div class="student-card" onclick="openModal(15)">
+    <div class="photo">
+        <img src="jl.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Jafeth Lozano</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 16. Danny Gallo -->
+<div class="student-card" onclick="openModal(16)">
+    <div class="photo">
+        <img src="dg.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Danny Gallo</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 17. Diego Valladares -->
+<div class="student-card" onclick="openModal(17)">
+    <div class="photo">
+        <img src="dv.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Diego Valladares</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 18. Mateo Gómez -->
+<div class="student-card" onclick="openModal(18)">
+    <div class="photo">
+        <img src="mg.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Mateo Gómez</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- 19. Villafranca -->
+<div class="student-card" onclick="openModal(19)">
+    <div class="photo">
+        <img src="v.jpeg">
+        <span></span>
+    </div>
+    <div class="name">Villafranca</div>
+    <small>Click to learn more</small>
+</div>
+
+<!-- =========================
+     DESCRIPTIONS 1 - 11
+========================= -->
+
+<!-- Alisson -->
+<div class="modal" id="modal1" onclick="outside(event,1)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(1)">&times;</button>
+
+        <img src="ae.jpeg">
+
+        <h2>Alisson Erazo</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is super cheerful and playful. She is one of the happiest
+            girls you could ever meet, and we cannot forget her beautiful
+            dimples when she smiles, which make her look absolutely gorgeous.
+        </p>
+    </div>
+</div>
+
+
+<!-- Ayelen -->
+<div class="modal" id="modal2" onclick="outside(event,2)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(2)">&times;</button>
+
+        <img src="aa.jpeg">
+
+        <h2>Ayelen Avila</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is super intelligent and very talented at drawing. I think
+            it is one of her greatest talents. She also does really well
+            in her classes and is a very sweet and beautiful person.
+        </p>
+    </div>
+</div>
+
+
+<!-- Angie -->
+<div class="modal" id="modal3" onclick="outside(event,3)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(3)">&times;</button>
+
+        <img src="al.jpeg">
+
+        <h2>Angie Lanza</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is one of the sweetest people you could ever meet. She has
+            so much love in her heart, and I think that is one of the things
+            that makes her such a special person to have as a friend.
+        </p>
+    </div>
+</div>
+
+
+<!-- Andrea -->
+<div class="modal" id="modal4" onclick="outside(event,4)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(4)">&times;</button>
+
+        <img src="as.jpeg">
+
+        <h2>Andrea Serrano</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is the cutest person in the universe. I would say she
+            absolutely loves sleeping because she is always missing from
+            everything, but even so, she is someone truly special.
+        </p>
+    </div>
+</div>
+
+
+<!-- Ana Lucia -->
+<div class="modal" id="modal5" onclick="outside(event,5)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(5)">&times;</button>
+
+        <img src="aaaa.jpeg">
+
+        <h2>Ana Lucia</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is the shortest of the Seniors in height, but she is
+            absolutely beautiful. She is also a very strong person who
+            knows how to keep going and stand out even when she cannot
+            see a way out of a difficult situation.
+        </p>
+    </div>
+</div>
+
+
+<!-- Camila -->
+<div class="modal" id="modal6" onclick="outside(event,6)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(6)">&times;</button>
+
+        <img src="cb.jpeg">
+
+        <h2>Camila Briceño</h2>
+
+        <div class="line"></div>
+
+        <p>
+            I think she is one of those people whose humor is incredibly
+            funny and sometimes difficult to understand. She always comes
+            up with the most unexpected and hilarious things, but that
+            definitely does not take away from how pretty she is.
+        </p>
+    </div>
+</div>
+
+
+<!-- Eimy -->
+<div class="modal" id="modal7" onclick="outside(event,7)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(7)">&times;</button>
+
+        <img src="eb.jpeg">
+
+        <h2>Eimy Baiza</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is the cutest and most sensitive person in the universe.
+            She loves Soy Luna and she also loves not replying to messages
+            (I will kill her). I think she is one of the people I love
+            the most in this world.
+        </p>
+    </div>
+</div>
+
+
+<!-- Solangi -->
+<div class="modal" id="modal8" onclick="outside(event,8)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(8)">&times;</button>
+
+        <img src="sh.jpeg">
+
+        <h2>Solangi Zuniga</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She can be a little difficult to understand at first, but once
+            you start getting to know her, you realize how amazing she is.
+            And we cannot forget her beautiful curly hair.
+        </p>
+    </div>
+</div>
+
+
+<!-- Soemy -->
+<div class="modal" id="modal9" onclick="outside(event,9)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(9)">&times;</button>
+
+        <img src="ss.jpeg">
+
+        <h2>Soemy Salinas</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is the one of my piece, ouuu! She is super funny, but she
+            is also a really, really sweet and beautiful girl, even though
+            she struggles to dance while the guitar is playing.
+        </p>
+    </div>
+</div>
+
+
+<!-- Maria Fernanda -->
+<div class="modal" id="modal10" onclick="outside(event,10)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(10)">&times;</button>
+
+        <img src="mf.jpeg" alt="Maria Fernanda">
+
+        <h2>Maria Fernanda</h2>
+
+        <div class="line"></div>
+
+        <p>
+            She is a really playful and jealous girl, but she has a very
+            big heart. Her personality makes her a fun and special person
+            to have around.
+        </p>
+    </div>
+</div>
+
+
+<!-- Valeria -->
+<div class="modal" id="modal11" onclick="outside(event,11)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(11)">&times;</button>
+
+        <img src="vc.jpeg">
+
+        <h2>Valeria Cañas</h2>
+
+        <div class="line"></div>
+
+        <p>
+            Yourfavbae :3
+        </p>
+    </div>
+</div>
+
+<!-- Rafael Flores -->
+<div class="modal" id="modal12" onclick="outside(event,12)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(12)">&times;</button>
+
+        <img src="rl.jpeg">
+
+        <h2>Rafael Flores</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is one of the most reserved and carefree guys in the class.
+            He may not be interested in many things, but he is actually
+            really fun to talk to and can always make a conversation enjoyable.
+        </p>
+    </div>
+</div>
+
+
+<!-- Mauricio Espinoza -->
+<div class="modal" id="modal13" onclick="outside(event,13)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(13)">&times;</button>
+
+        <img src="gg.jpeg">
+
+        <h2>Mauricio Espinoza</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is one of the loudest people in the classroom, but he always
+            brings energy and excitement to everything he does. His personality
+            definitely makes the classroom a more lively place.
+        </p>
+    </div>
+</div>
+
+
+<!-- Nelson Soto -->
+<div class="modal" id="modal14" onclick="outside(event,14)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(14)">&times;</button>
+
+        <img src="ns.jpeg">
+
+        <h2>Nelson Soto</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is a very social and spontaneous person, and you can almost
+            always end up having a really good conversation with him.
+            His personality makes it easy to have a good time around him.
+        </p>
+    </div>
+</div>
+
+
+<!-- Jafeth Lozano -->
+<div class="modal" id="modal15" onclick="outside(event,15)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(15)">&times;</button>
+
+        <img src="jl.jpeg">
+
+        <h2>Jafeth Lozano</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is usually very spontaneous and sometimes quiet, but whenever
+            there is something to do instead of just doing nothing, he always
+            puts effort and interest into it. He is also the most handsome 
+            boy of the school and of tegucialpa, he also loves Olimpia and
+            wants to play in the team when he become an adult :3
+        </p>
+    </div>
+</div>
+
+
+<!-- Danny Gallo -->
+<div class="modal" id="modal16" onclick="outside(event,16)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(16)">&times;</button>
+
+        <img src="dg.jpeg">
+
+        <h2>Danny Gallo</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is one of the grumpiest and most mischievous guys in the
+            classroom. I would definitely consider him a hungry and thirsty
+            human being because he always needs extra food and drinks in reserve.
+        </p>
+    </div>
+</div>
+
+
+<!-- Diego Valladares -->
+<div class="modal" id="modal17" onclick="outside(event,17)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(17)">&times;</button>
+
+        <img src="dv.jpeg">
+
+        <h2>Diego Valladares</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is a very extroverted and social person. He is also really
+            spontaneous when speaking in public, especially when it comes
+            to making jokes and getting everyone to laugh.
+        </p>
+    </div>
+</div>
+
+
+<!-- Mateo Gómez -->
+<div class="modal" id="modal18" onclick="outside(event,18)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(18)">&times;</button>
+
+        <img src="mg.jpeg">
+
+        <h2>Mateo Gómez</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is one of the kindest and smartest guys in my classroom.
+            He is also very wise, and his presence is always pleasant.
+            He is definitely one of those people who makes the classroom
+            feel like a better place.
+        </p>
+    </div>
+</div>
+
+
+<!-- Villafranca -->
+<div class="modal" id="modal19" onclick="outside(event,19)">
+    <div class="modal-box">
+        <button class="close" onclick="closeModal(19)">&times;</button>
+
+        <img src="v.jpeg">
+
+        <h2>Villafranca</h2>
+
+        <div class="line"></div>
+
+        <p>
+            He is the most reserved person of all and tends to be carefree
+            about several aspects of his life. But that is simply part of
+            what makes him who he is.
+        </p>
+    </div>
+</div>
+<script>
+function openModal(n){document.getElementById("modal"+n).classList.add("show");document.body.style.overflow="hidden"}
+function closeModal(n){document.getElementById("modal"+n).classList.remove("show");document.body.style.overflow=""}
+function outside(e,n){if(e.target===e.currentTarget)closeModal(n)}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.show").forEach(m=>m.classList.remove("show"));});
+</script>
+</body>
+</html>

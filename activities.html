@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Activities | Seniors '26</title>
+
+<style>
+
+/* GENERAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f4f1;
+    color:#333;
+}
+
+
+/* NAVIGATION */
+
+nav{
+    background:#222;
+    padding:16px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#e89bc1;
+}
+
+
+/* HEADER */
+
+header{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+    border-bottom:8px solid #e89bc1;
+}
+
+header h1{
+    font-size:65px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+header p{
+    font-size:20px;
+    color:#e8b5cf;
+    letter-spacing:1px;
+}
+
+
+/* MAIN */
+
+.container{
+    width:88%;
+    max-width:1150px;
+    margin:70px auto;
+}
+
+
+/* ACTIVITY */
+
+.activity{
+    background:white;
+    display:flex;
+    min-height:300px;
+    margin-bottom:70px;
+    border:1px solid #ddd;
+    box-shadow:10px 10px 0px #e89bc1;
+    transition:0.3s;
+}
+
+.activity:hover{
+    transform:translateY(-7px);
+    box-shadow:15px 15px 0px #222;
+}
+
+
+/* IMAGE */
+
+.image{
+    width:45%;
+    min-height:300px;
+    background:#eee;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#888;
+    font-size:20px;
+}
+
+.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* CONTENT */
+
+.content{
+    width:55%;
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.content h2{
+    color:#222;
+    font-size:32px;
+    margin-bottom:20px;
+    position:relative;
+    padding-bottom:12px;
+}
+
+.content h2::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:60px;
+    height:4px;
+    background:#e89bc1;
+}
+
+.content p{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+}
+
+
+/* DIFFERENT CARD POSITIONS */
+
+.activity:nth-child(even){
+    flex-direction:row-reverse;
+    box-shadow:-10px 10px 0px #222;
+}
+
+.activity:nth-child(even):hover{
+    box-shadow:-15px 15px 0px #e89bc1;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:100px;
+}
+
+footer p{
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav ul{
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    header{
+        padding:70px 20px;
+    }
+
+    header h1{
+        font-size:42px;
+        letter-spacing:3px;
+    }
+
+    header p{
+        font-size:17px;
+    }
+
+    .container{
+        width:90%;
+        margin:50px auto;
+    }
+
+    .activity,
+    .activity:nth-child(even){
+        flex-direction:column;
+        box-shadow:7px 7px 0px #e89bc1;
+    }
+
+    .activity:hover,
+    .activity:nth-child(even):hover{
+        box-shadow:10px 10px 0px #222;
+    }
+
+    .image,
+    .content{
+        width:100%;
+    }
+
+    .image{
+        height:250px;
+        min-height:250px;
+    }
+
+    .content{
+        padding:30px;
+    }
+
+    .content h2{
+        font-size:27px;
+    }
+
+    .content p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul>
+
+<li><a href="start.html">Home</a></li>
+
+<li><a href="activities.html">Activities</a></li>
+
+<li><a href="achievements.html">Achievements</a></li>
+
+<li><a href="about us.html">About Us</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>Our Activities</h1>
+
+<p>Memorable moments that made our senior year unforgettable.</p>
+
+</header>
+
+
+<!-- ACTIVITIES -->
+
+<div class="container">
+
+
+<!-- CHIMINIKE -->
+
+<div class="activity">
+
+<div class="image">
+
+<img src="chi.JPEG" alt="Visit to Chiminike">
+
+</div>
+
+<div class="content">
+
+<h2>Visit to Chiminike</h2>
+
+<p>
+Our class visited Chiminike as part of an educational experience.
+During the trip, we explored interactive exhibits, strengthened teamwork,
+and enjoyed learning through science and technology in a fun environment.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- TES -->
+
+<div class="activity">
+
+<div class="image">
+
+<img src="TES.JPEG" alt="TES Projects">
+
+</div>
+
+<div class="content">
+
+<h2>TES Projects</h2>
+
+<p>
+Throughout the school year, we worked on different TES projects that
+allowed us to develop research, creativity, communication, and teamwork
+skills while applying what we learned in class.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ICF -->
+
+<div class="activity">
+
+<div class="image">
+
+<img src="icf.JPEG" alt="TES Projects">
+
+</div>
+
+<div class="content">
+
+<h2>Visit to the ICF</h2>
+
+<p>
+Our visit to the ICF gave us the opportunity to learn more about
+Honduras' cultural heritage and the importance of protecting the country's
+historical and archaeological treasures.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- BAKE SALES -->
+
+<div class="activity">
+
+<div class="image">
+
+<img src="B.JPEG" alt="TES Projects">
+
+</div>
+
+<div class="content">
+
+<h2>Bake Sales</h2>
+
+<p>
+The Seniors'26 class organized several bake sales to raise funds for
+our graduation activities. These events promoted teamwork,
+responsibility, and participation from the entire school community.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VALENTINE -->
+
+<div class="activity">
+
+<div class="image">
+
+<img src="D.JPEG" alt="TES Projects">
+
+</div>
+
+<div class="content">
+
+<h2>Valentine's Day Celebration</h2>
+
+<p>
+We organized a special Valentine's Day celebration with decorations,
+music, games, and activities that brought students together and created
+a joyful atmosphere across the school.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ERA -->
+
+<div class="activity">
+
+<div class="image">
+
+<img src="E.JPEG" alt="TES Projects">
+
+</div>
+
+<div class="content">
+
+<h2>ERA 2026 Elections</h2>
+
+<p>
+The Seniors'26 class was responsible for organizing and managing the
+ERA 2026 student elections. We coordinated logistics, supervised the
+voting process, and helped ensure a fair and successful event.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 The Roble Academy | Seniors '26</p>
+
+</footer>
+
+
+</body>
+</html>
+```

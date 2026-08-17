@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Roble Academy | Seniors '26</title>
+
+<style>
+
+/* ===== GENERAL ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff7fb;
+    color:#333;
+}
+
+
+/* ===== NAVIGATION ===== */
+
+nav{
+    width:100%;
+    background:white;
+    padding:20px 0;
+    box-shadow:0 3px 15px rgba(0,0,0,0.08);
+    position:relative;
+    z-index:10;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:55px;
+}
+
+nav ul li a{
+    color:#78356C;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#e89bc1;
+}
+
+
+/* ===== HERO ===== */
+
+.hero{
+
+    min-height:88vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    background-image:url("seniors'26.jfif");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    color:white;
+}
+
+
+/* Overlay */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        rgba(120,53,108,0.65),
+        rgba(232,155,193,0.55)
+    );
+
+}
+
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    background:rgba(255,255,255,0.15);
+
+    padding:55px 50px;
+
+    border:2px solid rgba(255,255,255,0.5);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(5px);
+
+}
+
+
+/* Main title */
+
+.hero-content h1{
+
+    font-size:75px;
+
+    letter-spacing:6px;
+
+    margin-bottom:10px;
+
+    text-transform:uppercase;
+
+    text-shadow:3px 4px 8px rgba(0,0,0,0.3);
+
+}
+
+
+/* School name */
+
+.hero-content h2{
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+    color:#ffe1ef;
+
+    letter-spacing:2px;
+
+}
+
+
+/* Description */
+
+.hero-content p{
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ===== BUTTON ===== */
+
+.button{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    background:white;
+
+    color:#78356C;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    font-size:17px;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+.button:hover{
+
+    background:#78356C;
+
+    color:white;
+
+    transform:scale(1.05);
+
+}
+
+
+/* ===== FOOTER ===== */
+
+footer{
+
+    background:#78356C;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+footer p{
+
+    font-size:15px;
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:700px){
+
+    nav ul{
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+    }
+
+    nav ul li a{
+
+        font-size:14px;
+
+    }
+
+
+    .hero{
+
+        min-height:90vh;
+
+        padding:30px 15px;
+
+    }
+
+
+    .hero-content{
+
+        padding:40px 25px;
+
+    }
+
+
+    .hero-content h1{
+
+        font-size:45px;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .hero-content h2{
+
+        font-size:23px;
+
+    }
+
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+
+    .button{
+
+        padding:14px 28px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===== NAVIGATION ===== -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="activities.html">Activities</a>
+</li>
+
+<li>
+<a href="achievements.html">Achievements</a>
+</li>
+
+<li>
+<a href="about us.html">About Us</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- ===== HERO ===== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Seniors '26</h1>
+
+<h2>The Roble Academy</h2>
+
+<p>
+Welcome to the official website of the Class of 2026.
+Here you will discover our activities, achievements,
+and the memories that make our senior year unforgettable.
+</p>
+
+<a href="activities.html" class="button">
+Explore Our Journey
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+<p>© 2026 The Roble Academy | Seniors '26</p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
